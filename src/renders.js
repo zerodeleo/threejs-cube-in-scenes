@@ -14,11 +14,10 @@ import { canvas } from './canvas';
       alpha: true
   })
   renderer.setSize(sizes.width, sizes.height)
-  camera.lookAt(cube.position)
   renderer.render(scene, camera)
 };
 
 export const render = (name) => {
-  cameras[name].lookAt(cube.position);
+  name === 'perspective' ? cameras[name].lookAt(cube.position) : null;
   initRender(canvas[name], cameras[name]);
 }
