@@ -30,7 +30,6 @@ window.addEventListener('click', (e) => {
             render(canvas[name], cameras[name]);
             break;
         default:
-        console.log('Nothing happened');
         break;
     }
 });

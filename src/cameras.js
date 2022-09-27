@@ -13,7 +13,6 @@ import { configureCameras } from './config';
 };
 
 const initCameras = (name) => {
-  console.log(configureCameras[name]);
   cameras[name].position.set(
       configureCameras[name].position[0],
       configureCameras[name].position[1],
