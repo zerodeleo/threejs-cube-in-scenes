@@ -1,13 +1,13 @@
 import './style.css'
 import cameras, { move } from './cameras';
-import { canvas } from './canvas';
+import { canvas, canvasHtml } from './canvas';
 import { render } from './utils';
 import { configMove } from './config';
 import cube from './objects';
 
-render(canvas.top, cameras.top);
-render(canvas.front, cameras.front);
-render(canvas.perspective, cameras.perspective);
+Object.keys(canvas).forEach(canva => {
+    render(canvas[canva], cameras[canva])
+});
 
 window.addEventListener('click', (e) => {
     e.preventDefault();
